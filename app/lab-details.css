@@ -1,0 +1,63 @@
+.projects-section .section-title-row { align-items: center; }
+.studio-diorama {
+  width: min(46%, 520px);
+  margin: 0 0 0 auto;
+}
+.studio-diorama > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  overflow: visible;
+}
+.studio-diorama figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: .55rem 9% 0;
+  padding-top: .4rem;
+  border-top: 1px solid #a78f712e;
+  color: #645a50;
+  font: 9px var(--mono);
+  letter-spacing: .12em;
+}
+.studio-diorama figcaption span span { margin-inline: .4em; color: #aa7764; }
+.studio-diorama button {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex: none;
+  border: 1px solid #cfbfa8;
+  border-radius: 50%;
+  background: #fffaf0ab;
+}
+.studio-diorama button:hover { background: #ffe5d1; }
+.studio-display-title { font: 600 13px monospace; fill: #4b645b; letter-spacing: 2px; }
+.studio-flow {
+  stroke: #ce735c;
+  stroke-linecap: round;
+  stroke-dasharray: .14 1.2;
+  animation: network-pass 4s linear infinite both;
+}
+.studio-output-links .studio-flow { stroke: #43897f; animation-delay: 1.45s; }
+.studio-source { stroke-dasharray: 1; animation: source-line 5.3s ease-in-out infinite; }
+.studio-diorama[data-motion="off"] :is(.studio-flow, .studio-source) { animation-play-state: paused; }
+@keyframes network-pass {
+  0% { stroke-dashoffset: .14; opacity: 0; }
+  5% { opacity: 1; }
+  36% { stroke-dashoffset: -1; opacity: 1; }
+  37%, 100% { stroke-dashoffset: -1; opacity: 0; }
+}
+@keyframes source-line { 0%, 12% { stroke-dashoffset: .64; } 45%, 100% { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  /* In this mode "on" requires an explicit press of the studio's Play button. */
+  .studio-diorama[data-motion="on"] .studio-flow { animation: network-pass 4s linear infinite both !important; }
+  .studio-diorama[data-motion="on"] .studio-output-links .studio-flow { animation-delay: 1.45s !important; }
+  .studio-diorama[data-motion="on"] .studio-source { animation: source-line 5.3s ease-in-out infinite !important; }
+}
+@media (max-width: 760px) {
+  .projects-section .section-title-row { align-items: stretch; }
+  .studio-diorama { width: min(100%, 410px); }
+}

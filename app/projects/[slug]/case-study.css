@@ -1,0 +1,30 @@
+.case-page { --case-wash: #d7eeea; --case-accent: #277e76; }
+.case-page[data-theme="security"] { --case-wash: #e1efca; --case-accent: #456d44; }
+.case-page[data-theme="attendance"] { --case-wash: #ffdfca; --case-accent: #945642; }
+.case-page[data-theme="health"] { --case-wash: #dfebfa; --case-accent: #4d6590; }
+.case-page[data-theme="vault"] { --case-wash: #eae0f6; --case-accent: #75548c; }
+.case-page .case-nav { border-bottom: 1px solid var(--line); }
+.case-page .case-header { padding-block: clamp(42px, 6vw, 86px) 27px; }
+.case-overline { display: flex; gap: 12px; align-items: center; margin-bottom: 22px; color: var(--case-accent); font: 10px/1.4 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.case-overline span + span { border-left: 1px solid currentColor; padding-left: 12px; }
+.case-page .case-kicker { color: var(--case-accent); font-size: clamp(23px, 2.7vw, 38px); }
+.case-page .case-meta { justify-content: flex-start; align-items: center; gap: 16px; }
+.case-status { display: inline-block; padding: 6px 11px; color: var(--ink); border-radius: 4px; background: var(--case-wash); }
+.case-page .case-body { gap: clamp(38px, 7.5vw, 135px); grid-template-columns: minmax(190px, 1fr) minmax(0, 2.1fr); }
+.case-body > article { max-width: 780px; }
+.case-body article .eyebrow { display: block; color: var(--case-accent); margin-bottom: 12px; }
+.case-body article section > h2 { line-height: 1.17; font-size: clamp(25px, 2.7vw, 41px); }
+.case-stages { list-style: none; padding: 0; margin: 25px 0 0; }
+.case-stages li { display: grid; grid-template-columns: 29px 1fr; gap: 13px; padding-block: 16px; border-top: 1px solid var(--line); }
+.case-stages li > span { align-self: start; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--case-wash); color: var(--case-accent); font: 10px var(--mono); }
+.case-stages li h3 { font-size: 17px; margin-bottom: 3px; }
+.case-body article .case-stages p { font-size: 13px; }
+.engineering-note { padding: clamp(20px, 3vw, 32px); border-radius: 16px; background: linear-gradient(125deg, var(--case-wash), var(--ivory)); border: 1px solid var(--line); }
+.case-readme { margin-top: 14px; }
+.case-next-step { font-size: 18px; margin-block: 26px 8px; }
+.case-page .next-project { background: linear-gradient(115deg, var(--case-wash), var(--cream)); border: 1px solid var(--line); }
+@media (max-width: 760px) {
+  .case-page .case-body { grid-template-columns: 1fr; gap: 38px; }
+  .case-page .case-meta { align-items: flex-start; gap: 7px; }
+  .case-overline { font-size: 8px; }
+}
