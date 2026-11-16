@@ -81,7 +81,7 @@
   background: radial-gradient(ellipse at 4% 10%, #fce8f2 0%, transparent 42%), linear-gradient(115deg,#ece2fc,#e8e9ff);
 }
 .skills-section .section-heading { max-width: 1408px; margin-inline: auto; }
-.skills-section .skills-grid { align-items: center; gap: clamp(28px, 7vw, 120px); grid-template-columns: minmax(0,1fr) minmax(0,1.03fr); }
+.skills-section .skills-grid { align-items: center; gap: clamp(28px, 7vw, 120px); grid-template-columns: minmax(0,1fr); }
 .skills-grid > div { min-width: 0; }
 .skill-row strong { line-height: 1.3; }
 .skill-chips span { color: #453950; }
@@ -108,7 +108,7 @@
 .repo-card footer { font-size: 10px; flex-wrap: wrap; }
 .palette-empty, .copy-fallback { font-size: 13px; color: #66594f; line-height: 1.6; padding: 12px; }
 .contact-section { background: radial-gradient(ellipse at 91% 0%, #ecd8f5cc, transparent 46%), linear-gradient(125deg,#ffdebe,#ffbfa5 90%); }
-#classifier, #descent, #convolution { scroll-margin-top: 95px; }
+#classifier, #descent { scroll-margin-top: 95px; }
 @media (min-width: 761px) and (max-width: 1050px) {
   .hero-art { margin-inline: 0; padding-block: 12px; }
   .hero-composition { gap: 15px; }

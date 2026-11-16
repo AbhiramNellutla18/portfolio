@@ -29,7 +29,7 @@ The production build is in `out/`.
 ## What's inside
 
 - Responsive ivory, coral and pastel design with frosted glass accents.
-- Interactive classification, gradient descent and convolution experiments.
+- Interactive classification and gradient descent experiments.
 - Five project case studies with synthetic, interactive illustrations.
 - Animated neural-network graphics in an original workstation artwork.
 - GitHub repository search and language filters with offline fallbacks.

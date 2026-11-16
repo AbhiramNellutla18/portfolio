@@ -9,7 +9,6 @@ import { projects } from '@/data/projects';
 import type { Repo } from '@/lib/github';
 import LearningStudy from './learning-study';
 import DescentNote from './descent-note';
-import FeatureStudy from './feature-study';
 import VisionWorkbench from './vision-workbench';
 import ProjectGallery from './project-gallery';
 import GitHubExplorer from './github-explorer';
@@ -19,7 +18,6 @@ const specialties = ['AI & Machine Learning', 'Computer Vision', 'Full-Stack Eng
 const notebook = [
   { href: '#classifier', title: 'Classification', number: '01' },
   { href: '#descent', title: 'Model training', number: '02' },
-  { href: '#convolution', title: 'Feature extraction', number: '03' },
 ];
 const skillGroups = [
   { name: 'Programming languages', detail: 'Languages in my toolkit', items: ['Python', 'Java', 'TypeScript', 'C (foundations)'] },
@@ -188,7 +186,7 @@ export default function Portfolio({ initialRepos }: { initialRepos: Repo[] }) {
       <section id="skills" className="section skills-section">
         <SectionLabel number="03" title="THE TOOLKIT" note="TOOLS &amp; EXPERIMENTS"/>
         <h2 className="section-heading">Inside my <span className="serif">toolkit.</span></h2>
-        <div className="skills-grid"><div id="convolution"><FeatureStudy/></div>
+        <div className="skills-grid">
           <div className="skill-list">{skillGroups.map((group,i) =>
             <div key={group.name} className={`skill-row ${openSkill===i?'expanded':''}`}>
               <button onClick={() => setOpenSkill(openSkill===i?null:i)} aria-expanded={openSkill===i} aria-controls={`skill-${i}`}>
